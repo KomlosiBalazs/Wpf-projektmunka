@@ -1,0 +1,65 @@
+﻿<Window x:Class="Wpf_projektmunka.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_projektmunka"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="750" Width="1080">
+    <Grid x:Name="ToBeTransformed" HorizontalAlignment="Left" Height="718" VerticalAlignment="Top" Width="654">
+        <Image Margin="94,179,262,258">
+            <Image.Source>
+                <BitmapImage DecodePixelWidth="200"  UriSource="/Source/S1.png" />
+            </Image.Source>
+        </Image>
+        <Grid x:Name="transformers" HorizontalAlignment="Left" Height="711" VerticalAlignment="Top" Width="415" Margin="658,5,-419,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="163*"/>
+                <RowDefinition Height="548*"/>
+            </Grid.RowDefinitions>
+            <Grid  Name="pozicionálás" HorizontalAlignment="Left" Height="150" VerticalAlignment="Top" Width="405">
+                <Label Content="Pozícionálás" FontSize="15" Margin="10,1,272,112"/>
+                <Label Content="Vízszintes" RenderTransformOrigin="0.514,0.568" Height="27" Width="93" Margin="4,43,308,80"/>
+                <Slider Margin="97,43,10,78" ValueChanged="Slider_ValueChanged"/>
+                <Slider Margin="97,91,10,30"/>
+                <Label Content="Függőleges" RenderTransformOrigin="0.514,0.568" Height="27" Width="93" Margin="4,91,308,32"/>
+            </Grid>
+            <Grid  Name="nagyítás" HorizontalAlignment="Left" Height="183" VerticalAlignment="Top" Width="405" Margin="0,155,0,0" Grid.RowSpan="2">
+                <Label Content="Nagyítás" FontSize="18" Width="122" Margin="4,0,279,144"/>
+                <Label Content="Vízszintes" RenderTransformOrigin="0.514,0.568" Height="27" Width="93" Margin="4,44,308,112"/>
+                <Slider Margin="98,86,14,80"/>
+                <Label Content="Függőleges" RenderTransformOrigin="0.514,0.568" Height="27" Width="93" Margin="4,76,308,80"/>
+                <Slider Margin="97,44,14,118"/>
+                <Label Content="Y eltolás" RenderTransformOrigin="0.514,0.568" Height="27" Width="93" Margin="0,146,312,10"/>
+                <Slider Margin="97,146,9,0"/>
+                <Label Content="X eltolás" RenderTransformOrigin="0.514,0.568" Height="27" Width="93" Margin="0,108,312,48"/>
+                <Slider Margin="98,113,9,48"/>
+            </Grid>
+            <Grid  Name="forgatás" HorizontalAlignment="Left" Height="196" Margin="0,174.8,0,0" VerticalAlignment="Top" Width="415" Grid.Row="1">
+                <Label Content="Szög" RenderTransformOrigin="0.514,0.568" Height="27" Width="93" Margin="1,60,321,109"/>
+                <Label Content="Forgatás" FontSize="15" RenderTransformOrigin="0.514,0.568" Height="27" Width="93" Margin="0,10,322,159"/>
+                <Slider Margin="90,103,22,63"/>
+                <Label Content="X eltolás" RenderTransformOrigin="0.514,0.568" Height="27" Width="93" Margin="-3,106,325,63"/>
+                <Slider Margin="90,60,14,102"/>
+                <Label Content="Y eltolás" RenderTransformOrigin="0.514,0.568" Height="27" Width="93" Margin="1,159,321,10"/>
+                <Slider Margin="90,165,10,10"/>
+            </Grid>
+            <Grid  Name="Ferdítés" HorizontalAlignment="Left" Height="172" Margin="0,375.667,0,0" VerticalAlignment="Top" Width="415" Grid.Row="1">
+                <Label Content="Ferdítés" FontSize="18" Margin="9,0,224,142"/>
+                <Label Content="Vízszintes" RenderTransformOrigin="0.514,0.568" Height="27" Width="93" Margin="9,35,313,110"/>
+                <Slider Margin="98,68,14,80"/>
+                <Label Content="Függőleges" RenderTransformOrigin="0.514,0.568" Height="27" Width="93" Margin="5,68,317,77"/>
+                <Slider Margin="97,35,7,110"/>
+                <Label Content="Y eltolás" RenderTransformOrigin="0.514,0.568" Height="27" Width="93" Margin="5,135,317,10"/>
+                <Slider Margin="97,137,14,10" ValueChanged="Slider_ValueChanged"/>
+                <Label Content="X eltolás" RenderTransformOrigin="0.514,0.568" Height="27" Width="93" Margin="5,100,317,45"/>
+                <Slider Margin="98,100,9,48"/>
+            </Grid>
+        </Grid>
+        <Button Content="Alapértékre" FontSize="24" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="233" Height="74" Click="Button_Click"/>
+
+    </Grid>
+
+
+
+</Window>
